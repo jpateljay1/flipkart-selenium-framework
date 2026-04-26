@@ -1,0 +1,5 @@
+2026-04-21 18:42:29,984 - flipkart_automation - INFO - Starting test: test_failure_screenshot_capture
+2026-04-21 18:42:41,186 - flipkart_automation - INFO - Checking visibility of element: ('xpath', "//span[@role='button' and text()='✕']")
+2026-04-21 18:42:42,401 - flipkart_automation - INFO - Clicking on element: ('xpath', "//span[@role='button' and text()='✕']")
+2026-04-21 18:42:43,474 - flipkart_automation - ERROR - Test failed. Screenshot saved at: screenshots/test_failure_screenshot_capture_20260421_184242.png
+2026-04-21 18:42:43,475 - flipkart_automation - INFO - Finishing test: test_failure_screenshot_capture
