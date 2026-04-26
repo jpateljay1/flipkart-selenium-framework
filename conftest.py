@@ -19,7 +19,12 @@ if os.name == 'posix':
 def driver(request):
     logger.info(f"Starting test: {request.node.name}")
     chrome_options = uc.ChromeOptions()
-    # chrome_options.add_argument("--headless")  # Uncomment for headless execution
+    
+    # Enable headless mode if running in CI (GitHub Actions)
+    if os.environ.get('GITHUB_ACTIONS') == 'true':
+        chrome_options.add_argument("--headless")
+        logger.info("Running in headless mode (CI detected)")
+        
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--disable-dev-shm-usage")
     chrome_options.add_argument("--window-size=1920,1080")
